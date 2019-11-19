@@ -1,9 +1,11 @@
-import mimetypes
+import filetype
 
 full_file_name = 'teste'
-mime = mimetypes.guess_type(full_file_name)
-print(mime)
+kind = filetype.guess(full_file_name)
+print(kind.extension)
+print(kind.mime)
 
 full_file_name = 'teste.jpg'
-mime = mimetypes.guess_type(full_file_name)
-print(mime)
+kind = filetype.guess(full_file_name)
+print(kind.extension)
+print(kind.mime)
